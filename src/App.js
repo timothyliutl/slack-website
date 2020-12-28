@@ -4,6 +4,7 @@ import Sidebar from './Components/Sidebar.js'
 import Main from './Components/main.js'
 
 class App extends Component{
+  
 render(){
   return(
     <div style={{  display: 'flex',
