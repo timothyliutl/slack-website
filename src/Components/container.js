@@ -5,7 +5,8 @@ class Container extends Component {
     //can use modals or redirect to another page something to do this
     
     state = {
-        hover: false
+        hover: false,
+        open: false
     }
 
    //function that handles animations
@@ -20,7 +21,8 @@ class Container extends Component {
     }
  //Function that opens a modal
     onClick = () =>{
-        
+        //Makes it so open state alternates when clicked
+        this.setState({open:!this.state.open})
         
     }
 
@@ -30,8 +32,9 @@ class Container extends Component {
     
     render(){
         var paperStyles = {
-            width: this.props.width||250,
-            height: this.props.height||250,
+            //makes it so card expands when clicked on
+            width:this.state.open?(this.props.width||250)*2: this.props.width||250,
+            height:this.state.open?(this.props.height||250)*2: this.props.height||250,
             margin: 50,
             
             padding: 5,

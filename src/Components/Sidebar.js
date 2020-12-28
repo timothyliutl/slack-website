@@ -1,13 +1,19 @@
-import React from 'react';
+import { Paper } from '@material-ui/core';
+import React, { Component } from 'react';
 import Container from './container'
-const Sidebar = (params) =>{
 
-return(
+class Sidebar extends Component {
+    sidebar_style = {
+        height: '100%',
+        width: 250
+        }
 
-    <div>
-        <Container></Container>
-    </div>
-)
+render(){
+    
+    return(<div>
+        <Paper style={this.sidebar_style}></Paper>
+    </div>)
+}
 
 }
 
