@@ -1,6 +1,7 @@
 import React from 'react';
 import {Component} from 'react'
 import Appbar from './appbar'
+import PostContainer from '../MaterialUI Components/postContainer'
 
 class Mainpage extends Component{
 //Main homepage for the application
@@ -11,6 +12,7 @@ class Mainpage extends Component{
         return(
             <div style={this.style}>
                 <Appbar></Appbar>
+                <PostContainer></PostContainer>
             </div>
         )
     }

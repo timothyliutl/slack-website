@@ -60,7 +60,7 @@ const Appbar = ()=> {
 
         return (
             <div style={style}>
-                <AppBar position={'static'}>
+                <AppBar position={'fixed'}>
                     <Toolbar>
                         <IconButton edge={'start'} >
                             <ListIcon></ListIcon>
