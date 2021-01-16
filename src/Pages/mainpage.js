@@ -29,12 +29,16 @@ class Mainpage extends Component{
                 <Appbar openFunct = {this.setOpen}></Appbar>
 
                 <Sidebar isOpen = {this.state.appDrawerOpen} openFunct = {this.setOpen}></Sidebar>
-                <Grid container spacing={1} alignItems={'center'} justify={'center'}>
-                    <Grid item onClick ={this.setOpen}>
-                        <Typography variant={'h1'}>
-                            Big oofs from Emission
-                        </Typography>
+                
+                <Grid container alignItems={'center'} justify={'center'}>
+                    <Grid item>
+                            <Typography variant={'h1'}>
+                                Big oofs from Emission
+                            </Typography>
                     </Grid>
+                </Grid>
+                <Grid container spacing={1} alignItems={'center'} justify={'center'}>
+                    
 
                 <Grid item >
                   <PostContainer 
