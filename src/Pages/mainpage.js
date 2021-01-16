@@ -32,7 +32,7 @@ class Mainpage extends Component{
                 <Grid container spacing={1} alignItems={'center'} justify={'center'}>
                     <Grid item onClick ={this.setOpen}>
                         <Typography variant={'h1'}>
-                            Cedric Is a Pepegga 
+                            Big oofs from Emission
                         </Typography>
                     </Grid>
 
