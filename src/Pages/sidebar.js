@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import Typography from '@material-ui/core/Typography'
+import ListItem from "@material-ui/core/ListItem"
 
 
 const Sidebar = (props) =>{
@@ -16,7 +17,10 @@ const Sidebar = (props) =>{
         <div>
                 <Drawer anchor={'left'} open={props.isOpen} onClose={props.openFunct}>
                 <div style={drawerStyle}>
-                    <Typography variant={'h6'}> Cedric Lowlights</Typography>
+                    <ListItem onClick={props.openFunct}>
+                        <Typography variant={'h6'}> Cedric Lowlights</Typography>
+                    </ListItem>
+                    
                 </div>
                 </Drawer>
                 
