@@ -12,16 +12,18 @@ import {useState} from 'react';
 //TODO: Add hyperlinks and react router
 //Drawer uses react wtih hooks, take a look at it before programming the popup feature
 //this is really just the app bar
-const Appbar = ()=> {
+const Appbar = (props)=> {
 
     const style = {
-        width: '100%'
+        width: '100%',
+        marginBottom:100
     }
 
     const mainbodystyle ={
         marginLeft: "15%",
         marginRight: "15%",
-        marginTop: 20
+        marginTop: 20,
+
     }
 
     const dropdownStyle={
@@ -46,10 +48,6 @@ const Appbar = ()=> {
             setElevation(0);
             setid(null)
         }
-        const return_id = (event)=>{
-            console.log(event.currentTarget.id)
-            return event.currentTarget.id;
-        }
 
         const handleClick=(event)=>{
             setanchorEl(event.currentTarget);
@@ -62,7 +60,7 @@ const Appbar = ()=> {
             <div style={style}>
                 <AppBar position={'fixed'}>
                     <Toolbar>
-                        <IconButton edge={'start'} >
+                        <IconButton edge={'start'} onClick={props.openFunct}>
                             <ListIcon></ListIcon>
                         </IconButton>
                         <Typography variant={'h6'} style={{flex: 1}}>
