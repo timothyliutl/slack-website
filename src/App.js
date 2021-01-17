@@ -14,7 +14,8 @@ render(){
       <h2>Wow how did you find this</h2>
     </Route>
     <Route exact path={'/'} component={Mainpage}></Route>
-   
+    <Route exact path={'/emission'} component={Mainpage}></Route>
+    <Route exact path={'/juuls'} component={Mainpage}></Route>
     </div>
   );
 }
