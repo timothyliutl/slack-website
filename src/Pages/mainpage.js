@@ -9,10 +9,6 @@ import Sidebar from './sidebar'
 
 class Mainpage extends Component{
 //Main homepage for the application
-    style={
-    width:'100%',
-    }
-
     state = {
         appDrawerOpen: false
     }
@@ -25,7 +21,7 @@ class Mainpage extends Component{
     render(){
 
         return(
-            <div style={this.style}>
+            <div>
                 <Appbar openFunct = {this.setOpen}></Appbar>
 
                 <Sidebar isOpen = {this.state.appDrawerOpen} openFunct = {this.setOpen}></Sidebar>
