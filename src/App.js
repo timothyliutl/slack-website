@@ -3,6 +3,7 @@ import {Component} from 'react'
 import Sidebar from './Components/Sidebar.js'
 import Mainpage from './Pages/mainpage'
 import {Route} from 'react-router-dom'
+import PostContainer2 from './MaterialUI Components/postContainer2'
 class App extends Component{
   
 render(){
@@ -15,6 +16,7 @@ render(){
     </Route>
     <Route exact path={['/', '/emission']} component={Mainpage}></Route>
     <Route exact path={'/juuls'} component={Mainpage}></Route>
+    <Route exact path={'/test'}> <PostContainer2></PostContainer2> </Route>
     </div>
   );
 }
