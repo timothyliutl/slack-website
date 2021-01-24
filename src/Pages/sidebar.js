@@ -20,6 +20,19 @@ const Sidebar = (props) =>{
         
 
     }
+    if(props.notLoggedIn){
+        return(<div>
+            <Drawer anchor={'left'} open={props.isOpen} onClose={props.openFunct}>
+            <div style={drawerStyle}>
+                <ListItem>
+                    <Typography variant={'h5'} style={{fontWeight:'bold'}}>Login to see Lowlights</Typography>
+                </ListItem>
+                
+            </div>
+            </Drawer>
+            
+    </div>)
+    }
     return(
         <div>
                 <Drawer anchor={'left'} open={props.isOpen} onClose={props.openFunct}>

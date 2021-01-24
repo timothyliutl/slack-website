@@ -8,12 +8,19 @@ import Appbar from './appbar'
 import { useState } from 'react';
 import { render } from '@testing-library/react';
 import Auth from "../Methods/Auth"
+import Sidebar from "./sidebar"
 //TODO: Work on Creating POST and GET requests to the backend
 class LoginPage extends Component {
 
     state={
         username: "",
-        password:""
+        password:"",
+        appDrawerOpen: false
+    }
+    
+
+    setOpen = () =>{
+        this.setState({appDrawerOpen:!this.state.appDrawerOpen});
     }
     updateUsername = (event) =>{
         this.setState({username: event.target.value})
@@ -51,7 +58,8 @@ class LoginPage extends Component {
 
         return (
             <div style={style}>
-                <Appbar></Appbar>
+                <Appbar openFunct ={this.setOpen}></Appbar>
+                <Sidebar isOpen={this.state.appDrawerOpen} openFunct={this.setOpen} notLoggedIn={true}></Sidebar>
                 <Grid container direction='column' alignItems='center' justify='center'>
                     <Paper elevation={5} style={{ width: 350, height: 400, padding: 25, borderRadius: 25 }}>
                         <Grid container justify={'center'}>

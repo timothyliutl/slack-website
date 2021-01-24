@@ -1,8 +1,7 @@
 import React from 'react';
 const axios = require('axios');
 const Auth=(username, password)=>{
-    console.log(username)
-    console.log(password)
+    
     const postData = {
         userName: username,
         password: password
