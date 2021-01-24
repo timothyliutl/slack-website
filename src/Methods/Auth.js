@@ -7,7 +7,8 @@ const Auth=(username, password)=>{
         userName: username,
         password: password
     }
-    fetch("https://localhost:3000", {method: 'POST', headers:postData}).then(function(data){
+    //for some reason it only works for http but not https
+    fetch("http://localhost:3000/login", {method: 'POST', headers:postData}).then(function(data){
         console.log(data)
     }).catch(function(err){
         console.log(err)
