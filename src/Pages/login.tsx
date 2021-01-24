@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import { Button, button, Typography } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import { TextField } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid"
 import Paper from "@material-ui/core/Paper"
 import { Link } from "react-router-dom"
 import Appbar from './appbar'
-import { useState } from 'react';
-import { render } from '@testing-library/react';
 import Auth from "../Methods/Auth"
 import Sidebar from "./sidebar"
+
 //TODO: Work on Creating POST and GET requests to the backend
+
+type stateType = {
+    username: String,
+    password: String,
+    appDrawerOpen: boolean,
+}
+
 class LoginPage extends Component {
 
-    state={
+    state:stateType={
         username: "",
         password:"",
         appDrawerOpen: false
@@ -22,10 +28,10 @@ class LoginPage extends Component {
     setOpen = () =>{
         this.setState({appDrawerOpen:!this.state.appDrawerOpen});
     }
-    updateUsername = (event) =>{
+    updateUsername = (event: any) =>{
         this.setState({username: event.target.value})
     }
-    updatePassword = (event)=>{
+    updatePassword = (event: any)=>{
         this.setState({password: event.target.value})
     }
 
