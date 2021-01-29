@@ -6,6 +6,7 @@ import {Route} from 'react-router-dom'
 import PostContainer2 from './MaterialUI Components/postContainer2'
 import SignUp from "./Pages/signup"
 import Login from "./Pages/login"
+import Profile from './Pages/profile'
 class App extends Component{
   
 render(){
@@ -21,6 +22,7 @@ render(){
     <Route exact path={'/test'}> <PostContainer2></PostContainer2> </Route>
     <Route exact path={'/signup'} component={SignUp}></Route>
     <Route exact path={'/login'} component={Login}></Route>
+    <Route exact path={'/profile'} component={Profile}></Route>
     </div>
   );
 }
