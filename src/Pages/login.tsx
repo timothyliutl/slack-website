@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Typography } from '@material-ui/core';
+import { Button, GridList, GridListTile, Typography } from '@material-ui/core';
 import { TextField } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid"
 import Paper from "@material-ui/core/Paper"
@@ -14,14 +14,17 @@ type stateType = {
     username: String,
     password: String,
     appDrawerOpen: boolean,
+    token: String
 }
+
 
 class LoginPage extends Component {
 
     state:stateType={
         username: "",
         password:"",
-        appDrawerOpen: false
+        appDrawerOpen: false,
+        token:""
     }
     
 
@@ -104,6 +107,11 @@ class LoginPage extends Component {
                         </Grid>
                     </Paper>
                 </Grid>
+                <GridList>
+                    <GridListTile>
+                        
+                    </GridListTile>
+                </GridList>
             </div>
         );
     }

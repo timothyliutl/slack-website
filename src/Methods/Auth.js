@@ -7,7 +7,7 @@ const Auth=(username, password)=>{
         password: password
     }
     //for some reason it only works for http but not https
-    fetch("http://localhost:3000/login", {method: 'POST', headers:postData}).then(function(data){
+    fetch("http://lowlights.lol/api/login", {method: 'POST', headers:postData}).then(function(data){
         console.log(data)
     }).catch(function(err){
         console.log(err)
