@@ -7,8 +7,10 @@ import { Link } from "react-router-dom"
 import Appbar from './appbar'
 import Auth from "../Methods/Auth"
 import Sidebar from "./sidebar"
+import {createStore} from "redux";
 
 //TODO: Work on Creating POST and GET requests to the backend
+//TODO: Work on using redux to store the token
 
 type stateType = {
     username: String,
@@ -42,6 +44,8 @@ class LoginPage extends Component {
         Auth(this.state.username, this.state.password);
     }
 
+    
+
     render() {
         var style = {
             alignItems: 'center',
@@ -63,7 +67,20 @@ class LoginPage extends Component {
             color: 'blue'
         }
 
-        
+        const reducer = (state:any, action:any)=>{
+            switch(action.type){
+                
+            }
+            return state;
+    
+        }
+       //Testing code for redux, planning on using this to manage login state of website
+        const store = createStore(reducer, ["Login Token"]);
+
+         store.subscribe(()=>{
+            console.log("store updated")
+            console.log(store.getState())
+        })
 
         return (
             <div style={style}>
